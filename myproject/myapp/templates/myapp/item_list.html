@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Item List</h1>
+    <ul>
+        {% for item in items %}
+            <li><a href="{% url 'item_detail' item.pk %}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'item_create' %}">Add New Item</a>
+</body>
+</html>
